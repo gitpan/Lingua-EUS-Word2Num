@@ -1,7 +1,7 @@
 # For Emacs: -*- mode:cperl; mode:folding; coding:utf-8; -*-
 
 package Lingua::EUS::Word2Num;
-# ABSTRACT: Lingua::EUS::Word2Num is module for converting text containing number representation in Basque (Euskara) back into number. Converts whole numbers from 0 up to 999 999 999 999.
+# ABSTRACT: Word 2 number conversion in EUS.
 
 # {{{ use block
 
@@ -14,11 +14,10 @@ use Parse::RecDescent;
 # }}}
 # {{{ variable declarations
 
-my($ver)      = ('$Rev: 440 $' =~ m{(\d+)}xms);
-our $VERSION = $ver / 10_000;
+our $VERSION = 0.0577;
 
 our $INFO    = {
-    rev  => '$Rev: 440 $',
+    rev  => '$Rev: 577 $',
 };
 
 my $parser = eu_numerals();
@@ -157,12 +156,12 @@ Lingua::EUS::Word2Num
 
 =head1 VERSION
 
-version 0.044
+version 0.0577
 
 text to positive number convertor for Basque (Euskara).
 Input text must be encoded in utf-8.
 
-=head2 $Rev: 440 $
+=head2 $Rev: 577 $
 
 We use ISO 639-3 namespace.
 
@@ -175,6 +174,8 @@ We use ISO 639-3 namespace.
  print defined($num) ? $num : "sorry, can't convert this text into number.";
 
 =head1 DESCRIPTION
+
+Word 2 number conversion in EUS.
 
 Lingua::EUS::Word2Num is module for converting text containing number
 representation in Basque (Euskara) back into number. Converts whole numbers
